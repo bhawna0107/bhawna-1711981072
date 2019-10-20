@@ -1,0 +1,50 @@
+<html>
+<head><title>Login and signUp Page</title>
+<script type="text/javascript">
+		function validate()
+		{
+			var Username=document.getElementById("Username");
+			var Password=document.getElementById("Password");
+			if(Username.value.trim()=="" || Password.value.trim()=="")
+			{
+				alert("NO BLANK SPACES ARE ALLOWED");
+				return false;
+			}
+			else
+			{
+				true;
+			}
+		}
+	</script>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="loginbox">
+<div class="form">
+<p><font size="10">Welcome Gamers!!!</font></p>
+<form class="signup-form">
+<input  type="text" placeholder="Username">
+<input  type="text" placeholder="Password">
+<input type="text" placeholder="Email-id">
+<button>Create</button>
+<p class="message">Already Registered? <a href="#">LogIn</a></p>
+</form>
+
+
+<form  onsubmit="return validate()" action="mysite.html">
+<input id="Username" type="text" placeholder="Username">
+<input id="Password" type="password" placeholder="Password">
+<input type="submit" name="" value="login">
+<p class="message">Not Registered? <a href="#"> Register</a></p>
+</form>
+</div>
+</div>
+ 
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script>
+$('.message a').click(function(){
+$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+</body>
+
+</html>
